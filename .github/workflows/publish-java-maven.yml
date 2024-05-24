@@ -18,10 +18,7 @@ jobs:
           java-version: '8'
           distribution: 'adopt'
 
-      - name: Install JAR file to local Maven repository
-        run: mvn install:install-file -Dfile=/fas-json-logger-2.1.0-mule-plugin.jar -DgroupId=com.fas.mule.extensions -DartifactId=fas-json-logger -Dversion=2.1.0 -Dpackaging=jar -DgeneratePom=true
-
       - name: Deploy to GitHub Packages
-        run: mvn --batch-mode deploy -Dclassifier=mule-plugin
+        run: mvn --batch-mode deploy -Dclassifier=mule-plugin -Dfile=lib/fas-json-logger-2.1.0-mule-plugin.jar -DgroupId=com.fas.mule.extensions -DartifactId=fas-json-logger -Dversion=2.1.0 -Dpackaging=jar -DgeneratePom=true
         env:
           GITHUB_TOKEN: ${{ secrets.JAVA_TOKEN }}
