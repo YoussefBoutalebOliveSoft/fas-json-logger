@@ -1,0 +1,15 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.example</groupId>
+  <artifactId>my-artifact</artifactId>
+  <version>1.0.0</version>
+  <packaging>jar</packaging>
+  <distributionManagement>
+<repository>
+<id>github</id>
+<name>GitHub Packages</name>
+<url>https://maven.pkg.github.com/YoussefBoutalebOliveSoft/fas-json-logger</url>
+</repository> 
+</distributionManagement>
+
+</project>
